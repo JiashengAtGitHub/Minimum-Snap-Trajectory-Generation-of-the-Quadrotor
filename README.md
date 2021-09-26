@@ -1,6 +1,6 @@
 # Minimum-Snap-Trajectory-Generation
 * This work is an attempt that imitates [Minimum Snap Trajectory Generation and Control for Quadrotors.pdf](https://github.com/JiashengAtGitHub/Minimum-Snap-Trajectory-Generation/files/7230819/2011.-.cited.1050.-.Minimum.snap.trajectorygeneration.and.control.for.quadrotors.pdf) with my personal modification. 
-* I only leave the information which I think is worth record. This README file does not include enough information for a completed wrap-up, but now I'm too busy to add more. I  apologize.
+* I only leave the information which I think is worth record. This README file does not include enough information for a completed wrap-up, but now I'm too busy to add more. I  apologize.:sweat_smile:
 ## 1. Examples Presentation
 ### Example 1: The quadrotor goes through the waypoints (0 0 0),(2 0 0),(2 2 0),(0 2 0), in order.
 https://user-images.githubusercontent.com/77440902/134763321-8723978e-53fb-4360-b020-77714e85c66f.mp4
