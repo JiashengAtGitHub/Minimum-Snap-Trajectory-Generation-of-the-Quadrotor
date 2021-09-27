@@ -40,7 +40,7 @@ Below are structures of P and A. Here I use m=3 as an example, which means the w
 * The 1st part of A corresponds to desired waypoints.
 * The 2nd part of A corresponds to initial condition, here I specify the value of derivative of positions up to 4th.
 
-Unlike other segments, the first segment of the trajectory does not have a "former neighbor". That means you have to specify the value of initial condition. However on the transitional waypoints we only have to make the two "neighbors" equal, which saves DOF, rather than specifying values.
+Unlike other segments, the first segment of the trajectory does not have a "former neighbor". That means you have to specify the value of initial condition. However on the transitional waypoints we only have to make the two "neighbors" equal on the 1st, 2nd, 3rd, and 4th derivative, which saves DOF (Degree of Freedom), rather than specifying values.
 
 And it brings us a problem: How do you measure the initial condition up to 4th derivative of position in reality? 
 
