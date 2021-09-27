@@ -46,7 +46,7 @@ And it brings us a problem: How do you measure the initial condition up to 4th d
 One simple answer is to make the initial state in hover state, which is what I suggested. In this way we all know, without any calculation, the 1st, 2nd, 3rd, 4th derivative are all zero. But what if the initial condition is somenthing else or like a random value?
 
 Well before I talk about it please let me make one point clear in case anyone has no idea about the correlation between refernece and their correlated parameters:
-* The position's 0th derivative is position. (Sounds stupid)
+* The position's 0th derivative is position. (Sounds stupid:sweat_smile:)
 * The position's 1st derivative is velocity.
 * The position's 2nd derivative, acceleration, corresponds to the quadrotor's attitude. 
 * The position's 3rd derivative, jerk, corresponds to the quadrotor's anguler velocity.
