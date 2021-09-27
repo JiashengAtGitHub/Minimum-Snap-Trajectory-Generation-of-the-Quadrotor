@@ -59,7 +59,7 @@ Thus, we need to measure position, velocity, acceleration, anguler velocity, and
 * The velocity can be obtained by displacement divided by sample time.
 * The acceleration can be measured by accelerator.
 * The anguler velocity can be measured by on-board gyroscope.
-* The auguler acceleration can be measured by information above row with sample time. 
+* The anguler acceleration can be measured by information above row with sample time. 
 
 So many measurements which has to been done immediately since the quadrotor's initial condition may not be sustainable. That's why I recommend set initial condition at hover state.
 
