@@ -43,9 +43,15 @@ Below are structures of P and A. Here I use m=3 as an example, which means the w
 Unlike other segments, the first segment of the trajectory does not have a "former neighbor". That means you have to specify the value of initial condition. However on the transitional waypoints we only have to make the two "neighbors" equal on the 1st, 2nd, 3rd, and 4th derivative, which saves DOF (Degree of Freedom), rather than specifying values.
 
 And it brings us a problem: How do you measure the initial condition up to 4th derivative of position in reality? 
-Please let me make this point clear in case anyone has no idea about the correlation between refernece's derivative and their underneath parameters.
-* The reference is positional information. The reference's 0th derivative is position. (easy and stupid nonsense)
-* The reference's 1st derivative is 
+Please let me make this point clear in case anyone has no idea about the correlation between refernece and their correlated parameters.
+* The position's 0th derivative is position. (Sounds stupid)
+* The position's 1st derivative is velocity.
+* The position's 2nd derivative, acceleration, corresponds to the quadrotor's attitude. 
+* The position's 3rd derivative, jerk, corresponds to the quadrotor's anguler velocity.
+* The position's 4th derivative, snap, corresponds to the quadrotor's anguler acceleration.
+The decription above only depict a rough picture. If you would like to know the exact correlation, you have to derive the math. I don't show my personal derivation here because it was a long and bad-looking derivation, but it makes sense and has passed the test.
+
+Of course, you have to derive the equations unless you will never exactly understand the detailed correlations between these parameters. 
 
 * The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
