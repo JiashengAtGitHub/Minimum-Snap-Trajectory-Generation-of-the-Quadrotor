@@ -47,6 +47,6 @@ And it brings us a problem: How do you measure the initial condition up to 4th d
 * The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
 ## 3. The problems I might work on in the future.
-* Do trial of making the whole trajectory expressed as one polynimial. See what will happen.
-* **specify full desired condition at each waypoints.**
+* Do trial of making the whole trajectory expressed as one polynomial. See what will happen.
+* **Specify full desired condition at each waypoints.**
 * Study on spatial scaling & temporal scaling & optimal segments.
