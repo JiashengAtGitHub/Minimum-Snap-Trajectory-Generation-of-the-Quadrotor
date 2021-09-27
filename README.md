@@ -24,7 +24,7 @@ Theoretically, the higher continuity, the smoother the trajectory is, the better
 Now the question turns into a trade-off problem: how much continuity is proper? Through my simulations, I think the 4th continuity is a good choice.  
 
 
-Structure of matrix P, A & b
+### 2.3 Structure of matrix P, A 
 
 4th continuity
 
