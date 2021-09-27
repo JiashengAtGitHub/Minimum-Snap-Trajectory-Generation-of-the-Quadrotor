@@ -41,8 +41,10 @@ Below are structures of P and A. Here I use m=3 as an example, which means the w
 * The 2nd part of A corresponds to initial condition, here I specify the value of derivative of positions up to 4th.
 
 Unlike other segments, the first segment of the trajectory does not have a "former neighbor". That means you have to specify the value of initial condition. However on the transitional waypoints we only have to make the two "neighbors" equal on the 1st, 2nd, 3rd, and 4th derivative of the position, which saves DOF (Degree of Freedom), rather than specifying values.
+* The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
-And it brings us a problem: How do you measure the initial condition up to 4th derivative of position in reality? 
+
+### 2.4 How do you know the initial condition up to 4th derivative of position in reality? 
 One simple answer is to make the initial state in hover state, which is what I suggested. In this way we all know, without any calculation, the 1st, 2nd, 3rd, 4th derivative are all zero. But what if the initial condition is somenthing else or like a random value?
 
 Well before I talk about it please let me make one point clear in case anyone has no idea about the correlation between refernece and their correlated parameters:
@@ -63,7 +65,6 @@ Thus, we need to measure position, velocity, acceleration, anguler velocity, and
 
 So many measurements which has to been done immediately since the quadrotor's initial condition may not be sustainable. That's why I recommend set initial condition at hover state.
 
-* The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
 ## 3. The problems I might work on in the future.
 * Do trial of making the whole trajectory expressed as one polynomial. See what will happen.
