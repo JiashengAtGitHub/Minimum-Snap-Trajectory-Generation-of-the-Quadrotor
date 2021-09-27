@@ -23,7 +23,7 @@ Theoretically, the higher continuity, the smoother the trajectory is, the better
 
 Now the question turns into a trade-off problem: how much continuity is proper? Let's discuss it in two part: the theoretical part and the experimental part.
 * In theoretical part, it depends on what math model you use. I use the commonly-used model which seems "thrust + 3 toruqes" as inputs. Since torques correspond to 4th derivative of the reference, you only have to make it 3rd derivative continuity to make you simulation succeed. (In simulation we assume inputs can rapidly change.)
-* In experiemntal part, 3rd derivative continuity might work or not. In reality, torques can not change at infinite rate, so error must exist. You can use feedback controller to vanish the error. If your feebacd control is not good, you may have to enforce 4th derivative continuity. In rotor's model that means rotor speed value is continous. 
+* In experiemntal part, 3rd derivative continuity might work or not. In reality, torques can not change at infinite rate, so error must exist. You can use feedback controller to vanish the error. If your feebacd control is not good, you may have to enforce 4th derivative continuity, or even more. Insuring 4th derivative of position continuity means you have a continous value of rotor speed if you look at the rotor model.
 * I haven't conduct experiments. But only from the simulation part I guess 4th continuity is a proper choice. How about 3rd, 5th or even 6th continuity? I don't know until I will do the experiment.
   
 ### 2.3 Structure of matrix P, A 
