@@ -50,11 +50,9 @@ Well before I talk about it please let me make one point clear in case anyone ha
 * The position's 1st derivative is velocity.
 * The position's 2nd derivative, acceleration, corresponds to the quadrotor's attitude. 
 * The position's 3rd derivative, jerk, corresponds to the quadrotor's anguler velocity.
-* The position's 4th derivative, snap, corresponds to the quadrotor's anguler acceleration.
+* The position's 4th derivative, snap, corresponds to the quadrotor's anguler acceleration, **which also corresponds to motors' rotational speed**.
 
 The decription above merely depicts a rough picture. If you would like to know the exact correlation, you have to derive the math. I don't show my personal derivation here because it was a long and bad-looking derivation, but it makes sense and has passed the test.
-
-Now let's go on. 
 
 * The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
