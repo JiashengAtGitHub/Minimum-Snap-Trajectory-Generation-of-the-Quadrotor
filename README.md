@@ -37,12 +37,15 @@ Below are structures of P and A. Here I use m=3 as an example, which means the w
 
 * Matrix A
 ![A](https://user-images.githubusercontent.com/77440902/134834877-31e0a134-4edb-4533-b43c-045fb128f078.jpg)
-* The 1st part of A corresponds to desired waypoints.
+* The 1st part of A corresponds to our desired position at each waypoint.
 * The 2nd part of A corresponds to initial condition, here I specify the value of derivative of positions up to 4th.
 
 Unlike other segments, the first segment of the trajectory does not have a "former neighbor". That means you have to specify the value of initial condition. However on the transitional waypoints we only have to make the two "neighbors" equal on the 1st, 2nd, 3rd, and 4th derivative, which saves DOF (Degree of Freedom), rather than specifying values.
 
 And it brings us a problem: How do you measure the initial condition up to 4th derivative of position in reality? 
+Please let me make this point clear in case anyone has no idea about the correlation between refernece's derivative and their underneath parameters.
+* The reference is positional information. The reference's 0th derivative is position. (easy and stupid nonsense)
+* The reference's 1st derivative is 
 
 * The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
