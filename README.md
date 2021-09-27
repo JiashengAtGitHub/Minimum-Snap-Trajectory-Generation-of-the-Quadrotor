@@ -17,7 +17,7 @@ I use the same objective function as the one in the paper, namely minimum snap. 
 ### 2.2 I think insuring 4th continuity is enough, and good.
 The whole trajectory consists of m pieces of segments. Each segment is between 2 waypoints. On each waypoint, we have to decide how well the transition is, i.e., how many degrees of continuity you want. The paper used 4th continuity without an explanation, so I'm gonna add some of my personal thoughts.
 
-Theoretically, the higher continuity, the smoother the trajectory is, the better. In practice, enforcing more and higher continuity means we have to add more constraints to our optimization problem. This leads to two problems: feasibility and solver's computational capacity.
+Theoretically, the higher continuity, the smoother the trajectory is, the better. In practice, enforcing more and higher continuity means we have to add more constraints to our optimization problem. This leads to two issues: feasibility and solver's computational capacity.
 * Feasibility. Too many constriants might make the problem have no feasible solutions.
 * Solver's computational capacity. Even there are feasible solutions, too many constraints might make the solver be not able to solve the math. 
 
@@ -38,7 +38,12 @@ Below are structures of P and A. Here i use m=3 as an example, which means the w
 * Matrix A
 ![A](https://user-images.githubusercontent.com/77440902/134834877-31e0a134-4edb-4533-b43c-045fb128f078.jpg)
 * The 1st part of A corresponds to desired waypoints.
-* The 2nd part of A corresponds to initial condition, here I specify derivative of positions up to 4th.
+* The 2nd part of A corresponds to initial condition, here I specify the value of derivative of positions up to 4th.
+
+Unlike other segments, the first segment of the trajectory does not have a "former neighbor". That means you have to specify the value of initial condition. However on the transitional waypoints we only have to make the two "neighbors" equal, which saves DOF, rather than specifying values.
+
+And it brings us a problem: How do you measure the initial condition up to 4th derivative of position in reality? 
+
 * The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
 
 ## 3. The problems I might work on in the future.
