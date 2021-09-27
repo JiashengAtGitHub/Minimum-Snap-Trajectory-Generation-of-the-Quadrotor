@@ -30,7 +30,7 @@ Now the question turns into a trade-off problem: how much continuity is proper? 
 This is a QP (Quadratic Program) problem which can be formed as:
 <p align="center"> minimize  x^TPx </p> 
 <p align="center">  s.t  Ax=b  </p> 
-Below are structures of P and A. Here i use m=3 as an example, which means the whole trajectory consists of 3 segments.
+Below are structures of P and A. Here I use m=3 as an example, which means the whole trajectory consists of 3 segments.
 
 * Matrix P
 ![P](https://user-images.githubusercontent.com/77440902/134834859-c033ec08-572d-4196-8524-f5aa26df608e.jpg)
