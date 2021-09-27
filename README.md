@@ -1,5 +1,5 @@
 # Minimum-Snap-Trajectory-Generation
-* This work is an attempt that imitates [Minimum Snap Trajectory Generation and Control for Quadrotors.pdf](https://github.com/JiashengAtGitHub/Minimum-Snap-Trajectory-Generation/files/7230819/2011.-.cited.1050.-.Minimum.snap.trajectorygeneration.and.control.for.quadrotors.pdf) with my personal modification. 
+* This work is an attempt to imitate [Minimum Snap Trajectory Generation and Control for Quadrotors.pdf](https://github.com/JiashengAtGitHub/Minimum-Snap-Trajectory-Generation/files/7230819/2011.-.cited.1050.-.Minimum.snap.trajectorygeneration.and.control.for.quadrotors.pdf) with my personal modification. 
 * I only leave the information which I think is worth record. This README file does not include enough content for a completed wrap-up, but now I'm too busy to add more. I  apologize.:sweat_smile:
 * The MATLAB code is integrated, however.
 
@@ -25,7 +25,21 @@ Now the question turns into a trade-off problem: how much continuity is proper? 
 
 
 ### 2.3 Structure of matrix P, A 
+This is a QP (Quadratic Program) problem which can be formed as:
+<p align="center"> minimize  x^TPx </p> 
+<p align="center">  s.t  Ax=b  </p> 
+Below are structures of P and A. Here i use m=3 as an example, which means the whole trajectory consists of 3 segments.
 
-4th continuity
+* Matrix P
+![P](https://user-images.githubusercontent.com/77440902/134834859-c033ec08-572d-4196-8524-f5aa26df608e.jpg)
 
-## The problems I might work on in the future.
+* Matrix A
+![A](https://user-images.githubusercontent.com/77440902/134834877-31e0a134-4edb-4533-b43c-045fb128f078.jpg)
+* The 1st part of A corresponds to desired waypoints.
+* The 2nd part of A corresponds to initial condition, here I specify derivative of positions up to 4th.
+* The 3rd part of A corresponds to continuity on each waypoints, here I use 4th derivative.
+
+## 3. The problems I might work on in the future.
+* Do trial of making the whole trajectory expressed as one polynimial. See what will happen.
+* **specify full desired condition at each waypoints.**
+* Study on spatial scaling & temporal scaling & optimal segments.
