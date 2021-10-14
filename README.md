@@ -45,7 +45,7 @@ Unlike other segments, the first segment of the trajectory does not have a "form
 
 
 ### 2.4 How do you know the initial condition up to 4th derivative of position in reality? 
-One simple answer is to make the initial state in hover state, which is what I suggested. In this way we all know, without any calculation, the 1st, 2nd, 3rd, 4th derivative are all zero. But what if the initial condition is somenthing else or like a random value?
+One simple answer is to make the initial state in hover state, which is what I suggest. In this way we all know, without any calculation, the 1st, 2nd, 3rd, 4th derivative are all zero. But what if the initial condition is somenthing else or like a random value?
 
 Well before I talk about it please let me make one point clear in case anyone has no idea about the correlation between refernece and their correlated parameters:
 * The position's 0th derivative is position. (Sounds stupid:sweat_smile:)
